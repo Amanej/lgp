@@ -8,6 +8,16 @@ Template.upload.events({
     var images = event.target.images.files;
     for(var i = 0, ln = images.length; i < ln;i++) {
       console.log(images[i].name);
+
+      Modelpictures.insert(images[i], function(err, fileObj) {
+        if(err) {
+          console.log(err);
+          FlashMessages.sendError(err.reason);
+          Router.go('upload');
+        } else {
+          console.log("Upload successful");
+        }
+      });
     }
     console.log(images);
 
