@@ -1,0 +1,19 @@
+<template name="navbar">
+  <div class="menu" id="menu">
+    <img class="logo" src="img/logoblue-trans.png">
+      <h2>- Where digital meets<br/>physical</h2><a onClick="showMobileMenu()" class="mobileMenuIcon"></a>
+
+    <nav class="mainMenu" id="mainMenu">
+      <a href="/">Home</a>
+      <a href="upload">Share/Sell</a>
+      <a href="3dmodels">3D-Models</a>
+      <a href="designers">Designers</a>
+      {{#if currentUser}}
+      <a href="sign-out">Sign out</a>
+      {{else}}
+      <a href="sign-in">Login</a>
+      <a href="sign-up">Register</a>
+      {{/if}}
+    </nav>
+  </div>
+</template>

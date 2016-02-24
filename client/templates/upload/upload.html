@@ -1,0 +1,38 @@
+<template name="upload">
+  <div class="container">
+    {{#if currentUser}}
+    <form class="new-model">
+      <div class="uploadTitle">
+        <label for="title">Title: </label>
+        <input type="text" name="title" placeholder="Fill in the model title" />
+      </div>
+
+      <div class="uploadFile">
+        <label for="images">Choose images: </label>
+        <input type="file" name="images[]" id="modelimage" multiple>
+      </div>
+
+      <div class="uploadDescription">
+        <label for="description">Description: </label>
+        <textarea name="description">
+        </textarea>
+      </div>
+
+      <div class="uploadCategory">
+        <label for="category">Choose category</label>
+        <select name="category">
+          <option>Art</option>
+          <option>Brands</option>
+          <option>Fashion</option>
+          <option>Gadgets</option>
+          <option>Handcrafted</option>
+        </select>
+      </div>
+
+      <input type="submit" value="submit">
+    </form>
+    {{else}}
+      {{redirectUser}}
+    {{/if}}
+  </div>
+</template>
