@@ -5,12 +5,18 @@ Template.upload.events({
     var description = event.target.description.value;
     var category = event.target.category.value;
 
-    var images = event.target.images;
-    console.log(event);
+    var images = event.target.images.files;
+    for(var i = 0, ln = images.length; i < ln;i++) {
+      console.log(images[i].name);
+    }
+    console.log(images);
 
     console.log(title);
     console.log(description);
     console.log(category);
+
+
+    console.log(event);
 
     return false;
   }
