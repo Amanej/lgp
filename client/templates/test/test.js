@@ -12,9 +12,9 @@ Template.test.helpers({
     pic.forEach(function (image) {
       var id = image.picid;
       var images = Modelpictures.find({_id: id}).fetch();
-      console.log(images.url);
-      return images.url;
+      console.log(images);
       count += 1;
+      return images;
     });
   }
 });
