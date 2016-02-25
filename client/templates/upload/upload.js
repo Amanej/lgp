@@ -28,9 +28,11 @@ Template.upload.events({
             console.log("Upload successful");
             console.log(modelid);
             console.log(fileObj);
+            var pictureId = fileObj._id;
 
             Modelimages.insert({
               modelid: modelid,
+              picid: pictureId,
               name: picname
             }, function(err, id) {
               console.log(err);
