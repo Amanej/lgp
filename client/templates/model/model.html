@@ -1,0 +1,14 @@
+<template name="model">
+  {{#each models}}
+  <li>
+    <h3>{{name}}</h3>
+    <img src="" class="mainModelPicture">
+    <h4>Description:</h4>
+    <p class="description">
+      {{description}}
+    </p>
+    <a href="#">Buy</a>
+    <a href="#">Download</a>
+  </li>
+  {{/each}}
+</template>

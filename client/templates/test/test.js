@@ -1,6 +1,6 @@
 //helpers
 Template.test.helpers({
 'modelpictures': function() {
-  return Modelpictures.find().fetch();
+  return Modelpictures.find();
 }
 });
